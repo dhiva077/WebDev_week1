@@ -1,38 +1,45 @@
-// String can use single quote
-$name = 'Mike'
-// or double quote
-$name = "Mike"
+<?php
+// String bisa pakai single quote atau double quote
+$name = 'Thania';
+echo $name . "<br>";
 
-// Double quote string can escape characters \n = new line  \t = tab  \\ = backslash
-echo "Hello Mike\nHello David";
+$name = "Thania";
+echo $name . "<br>";
 
-// Double quote string can do interpolation
-echo "Hello $name";
+// Escape karakter
+echo "Hello Thania\nHello Arsya<br>";
 
-// string concat
-echo 'Hello ' . $name;
+// Interpolasi (langsung masukin variable ke string)
+echo "Hello $name<br>";
 
-// string length
-echo strlen($name);
+// Concatenation
+echo 'Hello ' . $name . "<br>";
 
-// Remove space(s) before and after
-echo trim($text)
+// String length
+echo strlen($name) . "<br>";
 
-// Convert to lowercase / uppercase
-echo strtolower($email);
-echo strtoupper($name);
+// Trim
+$text = "   Hello World   ";
+echo trim($text) . "<br>";
 
-// Converts the first character to uppercase
-echo ucfirst($name);  // 'Mike' 
+// Lowercase / Uppercase
+$email = "TEST@EMAIL.COM";
+echo strtolower($email) . "<br>";
+echo strtoupper($name) . "<br>";
 
-// Replace text a by text b in $text
-echo str_replace('a', 'b', $text);
+// Ubah huruf pertama jadi uppercase
+echo ucfirst("mike") . "<br>";
 
-// String Contains (PHP 8)
-echo str_contains($name, 'ke')  # true
+// Replace string
+echo str_replace('a', 'b', "banana") . "<br>";
 
-// Find numeric position of first occurrence 
-$pos = strpos($name, 'k'); # 2
+// String contains (PHP 8+)
+echo str_contains($name, 'ke') ? "true<br>" : "false<br>";
 
-// Returns portion of string (offset / length)
-echo substr($name, 0, $pos); # Mi 
+// Cari posisi karakter
+$pos = strpos($name, 'k');
+echo $pos . "<br>";
+
+// Substring
+echo substr($name, 0, $pos) . "<br>";
+?>

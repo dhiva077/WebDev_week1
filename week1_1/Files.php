@@ -1,5 +1,5 @@
 // Get the current dir
-$current_dir = __DIR__;
+$current_dir = _DIR_;
 
 // Check if file exist
 if (file_exists('/posts/first.txt')) {

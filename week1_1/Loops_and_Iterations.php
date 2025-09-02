@@ -1,28 +1,31 @@
-//for loop
-for ($i = 0; $i < 20; $i++) {
-    echo "i value = " . i;
+<?php
+// for loop (dibatasi sampai 5 biar output sesuai)
+for ($i = 0; $i < 5; $i++) {
+    echo "i value = " . $i . "<br>";
 }
 
-//while loop
+// while loop (dibatasi sampai 5 biar sama kaya di gambar)
 $number = 1;
-while ($number < 10) {
-    echo 'value : ' . $number ;
+while ($number < 5) {
+    echo "value: " . $number . "<br>";
     $number += 1;
 }
 
-//do while
+// do while (dibatasi sampai 5 juga)
 $number = 1;
 do {
-    echo 'value : ' . $number ;
+    echo "value: " . $number . "<br>";
     $number += 1;
-} while ($number < 10);
+} while ($number < 5);
 
-// foreach with break / continue exemple
+// foreach contoh
 $values = ['one', 'two', 'three'];
 foreach ($values as $value) {
     if ($value === 'two') {
-        break; // exit loop
+        break; // keluar loop
     } elseif ($value === 'three') {
-        continue; // next loop iteration
+        continue; // skip iteration
     }
+    echo $value . "<br>";
 }
+?>

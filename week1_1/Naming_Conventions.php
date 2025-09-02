@@ -1,25 +1,39 @@
-// PHP opening/closing tag
 <?php
-  echo "Hello World";
-?>
-// if no closing tag the rest of the file will be considered PHP
+// PHP opening/closing tag
+echo "Hello World ";
 
 // Short syntax for PHP echo
-<?= "Hello World" ?>
+?>
+<?= "Hello World (short syntax)" ?>
+<?php
 
-//Enable strict typing (first line of your PHP file)
-<? declare(strict_types=1);
+// function
+function updateProduct() {
+    echo " Product updated!";
+}
+updateProduct();
 
-// Include a PHP file
-require 'app/Product.php'
+// class
+class ProductItem {
+    public function __construct() {
+        echo " ProductItem created!";
+    }
+}
+$item = new ProductItem();
 
-// Create a namespace
-namespace App;
+// class dengan property
+class Product {
+    public $name = "Laptop";
+}
+$product = new Product();
+echo " Name from Product class: " . $product->name;
 
-// Use a namespace
-use App\Product;
+// variable
+$firstName = "Mike";
 
-$firstName = 'Mike'  // camelCase
-function updateProduct() // camelCase
-class ProductItem // StudlyCaps
-const ACCESS_KEY = '123abc'; // all upper case with underscore separators
+// constant
+const ACCESS_KEY = "123abc";
+
+echo " First name: $firstName";
+echo " Access key: " . ACCESS_KEY;
+?>

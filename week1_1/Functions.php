@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 // Arrow functions
-Route::get('/', fn () => view('welcome');
+Route::get('/', fn () => view('welcome'));
 
 
 // Typed parameter and typed return

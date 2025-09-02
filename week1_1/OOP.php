@@ -15,6 +15,7 @@ class Person
         $this->firstName = $firstName;
         $this->lastName = $lastName
    }
+}
 
 // Constructor Property Promotion (PHP 8)
 class Person 
@@ -23,6 +24,7 @@ class Person
     {
 
     }
+}
 
 // Getter and Setter
 class Person
